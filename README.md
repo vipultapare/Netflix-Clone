@@ -10,16 +10,17 @@
 
 
 <h2>Features</h2> 
-- Login / SignUp
-  - Sign In / Sign Up Form
-  - Redirect to Browse Page
--Browse (After Authentication)
-  - Header
-  - Main Movie
-     - Trailer in BG
-     - Title And Discription
-     - Movie Suggestions
-        - Movie Lists
-- Netflix GPT
-     - Search Bar
-     - Movie Suggestions
+</hr>
+- Login / SignUp </hr>
+  - Sign In / Sign Up Form </hr>
+  - Redirect to Browse Page </hr>
+-Browse (After Authentication) </hr>
+  - Header </hr>
+  - Main Movie </hr>
+     - Trailer in BG </hr>
+     - Title And Discription </hr>
+     - Movie Suggestions </hr>
+        - Movie Lists </hr>
+- Netflix GPT </hr>
+     - Search Bar </hr>
+     - Movie Suggestions </hr>
