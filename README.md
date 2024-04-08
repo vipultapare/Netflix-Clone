@@ -4,6 +4,9 @@
 <ui>
 <li>Create React App</li>
 <li>Install tailwind</li>
+<li>Build Header </li>
+<li>Login Form </li>
+<li>Sign Up Form </li>
 
 </ui>
 
@@ -24,3 +27,7 @@
 - Netflix GPT </hr>
      - Search Bar </hr>
      - Movie Suggestions </hr>
+
+
+<h2>Toggle Between Sign In and Sign Up </h2>
+<p>Used the react hook useState() to change the state of variable and have make the changes on the same form to convert the form from sign in to sign up and vice  versa. </p>
