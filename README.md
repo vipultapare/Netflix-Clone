@@ -7,6 +7,7 @@
 <li>Build Header </li>
 <li>Login Form </li>
 <li>Sign Up Form </li>
+<ui><li>Validation</li></ui>
 
 </ui>
 
