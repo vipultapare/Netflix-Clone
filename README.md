@@ -5,9 +5,11 @@
 <li>Create React App</li>
 <li>Install tailwind</li>
 <li>Build Header </li>
+<li>Routing Of App </li>
 <li>Login Form </li>
 <li>Sign Up Form </li>
-<ui><li>Validation</li></ui>
+<li>Validation</li>
+<li>useRef Hook</li>
 
 </ui>
 
@@ -32,3 +34,6 @@
 
 <h2>Toggle Between Sign In and Sign Up </h2>
 <p>Used the react hook useState() to change the state of variable and have make the changes on the same form to convert the form from sign in to sign up and vice  versa. </p>
+
+<h2>useRef()</h2>
+<p>Used useRef() hook for getting the values from input field to validate the email and password for the suitable format </p>
