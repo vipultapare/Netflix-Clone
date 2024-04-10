@@ -10,6 +10,9 @@
 <li>Sign Up Form </li>
 <li>Validation</li>
 <li>useRef Hook</li>
+<li>FireBase setup </li>
+<li>Create SignUp User Account</li>
+<li>Redux Store  for storing user data</li>
 
 </ui>
 
@@ -17,19 +20,19 @@
 
 <h2>Features</h2> 
 </hr>
-- Login / SignUp </hr>
-  - Sign In / Sign Up Form </hr>
-  - Redirect to Browse Page </hr>
--Browse (After Authentication) </hr>
-  - Header </hr>
-  - Main Movie </hr>
-     - Trailer in BG </hr>
-     - Title And Discription </hr>
-     - Movie Suggestions </hr>
-        - Movie Lists </hr>
-- Netflix GPT </hr>
-     - Search Bar </hr>
-     - Movie Suggestions </hr>
+- Login / SignUp </br>
+  - Sign In / Sign Up Form </br>
+  - Redirect to Browse Page </br>
+-Browse (After Authentication) </br>
+  - Header </br>
+  - Main Movie </br>
+     - Trailer in BG </br>
+     - Title And Discription </br>
+     - Movie Suggestions </br>
+        - Movie Lists </br>
+- Netflix GPT </br>
+     - Search Bar </br>
+     - Movie Suggestions </br>
 
 
 <h2>Toggle Between Sign In and Sign Up </h2>
@@ -37,3 +40,18 @@
 
 <h2>useRef()</h2>
 <p>Used useRef() hook for getting the values from input field to validate the email and password for the suitable format </p>
+
+
+<h2>Fire Base Deploy Commands </h2>
+- npm install -g firebase-tools
+- firebase login
+- after login in  --- firebase init
+- select "Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+- build project - npm run build
+- firebase deploy
+
+<h2>Redux SetUp</h2>
+- First Install Redux libraries
+    - npm i -D @reduxjs/toolkit
+    - npm i react-redux  (2:53)
+
