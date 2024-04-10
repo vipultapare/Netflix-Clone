@@ -53,5 +53,10 @@
 <h2>Redux SetUp</h2>
 - First Install Redux libraries
     - npm i -D @reduxjs/toolkit
-    - npm i react-redux  (2:53)
+    - npm i react-redux
+    -Create a store
+    - create a slice
+    -add slicereducer to store.
+    - then provide the store to body.
+    
 
