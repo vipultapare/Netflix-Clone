@@ -13,6 +13,10 @@
 <li>FireBase setup </li>
 <li>Create SignUp User Account</li>
 <li>Redux Store  for storing user data</li>
+<li> useNavigate Hook </li>
+<li>Implemented Sign Out </li>
+<li>Update Profile API Call </li>
+<li>Fetch From TMDB </li>
 
 </ui>
 
@@ -59,4 +63,8 @@
     -add slicereducer to store.
     - then provide the store to body.
     
+
+<h2>FireBase</h2>
+<h4>getAuth</h4>
+<p>Wherver we are sign in to our site or signing out or signing up it handle the changes in the site  , this is kind of like a event listener , this will be called automatically after doing one of these steps </p>
 

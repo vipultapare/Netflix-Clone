@@ -4,13 +4,22 @@ import { checkValidData } from "../Utils/validate";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Utils/firebase";
+import { useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser } from "../Utils/userSlice";
 
 const Login = () => {
   //Hooks
   const [isSignInForm, setIsSignInForm] = useState(true);
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
   const [errorMessage, setErrorMessage] = useState(null);
+
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -39,6 +48,34 @@ const Login = () => {
           const user = userCredential.user;
           //console.log(user);
           // ...
+          //update the profile
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/125269095?v=4",
+          })
+            .then(() => {
+              // update the store once again
+
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  name: displayName,
+                  photoURL: photoURL,
+                })
+              );
+              // Profile updated!
+              // ...
+              navigate("/browse");
+            })
+            .catch((error) => {
+              // An error occurred
+              // ...
+              setErrorMessage(error.message);
+            });
+
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -58,6 +95,7 @@ const Login = () => {
           const user = userCredential.user;
           // console.log(user);
           // ...
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -85,6 +123,7 @@ const Login = () => {
 
         {!isSignInForm && (
           <input
+            ref={name}
             type="text"
             placeholder="Full Name"
             className="p-4 my-2 w-full bg-gray-800"
@@ -127,5 +166,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// 3:05
