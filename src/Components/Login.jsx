@@ -17,7 +17,7 @@ const Login = () => {
   const password = useRef(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -67,7 +67,7 @@ const Login = () => {
               );
               // Profile updated!
               // ...
-              navigate("/browse");
+              // navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -75,7 +75,7 @@ const Login = () => {
               setErrorMessage(error.message);
             });
 
-          navigate("/browse");
+          // navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -95,7 +95,7 @@ const Login = () => {
           const user = userCredential.user;
           // console.log(user);
           // ...
-          navigate("/browse");
+          // navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;

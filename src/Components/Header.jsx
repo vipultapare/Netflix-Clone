@@ -5,8 +5,16 @@ import { signOut } from "firebase/auth";
 import { auth } from "../Utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+
+import { useDispatch } from "react-redux";
+import { addUser, removeUser } from "../Utils/userSlice";
 
 const Header = () => {
+  // dispacting for redux
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
   // find user from the store and get the information about him
@@ -15,13 +23,44 @@ const Header = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        navigate("/");
+        // navigate("/");
       })
       .catch((error) => {
         // An error happened.
         navigate("/error");
       });
   };
+
+  // firebase getAuth() function
+  // it will called only once
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // Sign Up or Sign in Phase
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(
+          addUser({
+            uid: uid,
+            email: email,
+            name: displayName,
+            photoURL: photoURL,
+          })
+        );
+        navigate("/browse");
+        // after  login success go to browsing page
+      } else {
+        // User is signed out
+        dispatch(removeUser({}));
+        // After logout redirect to homepage
+        navigate("/");
+      }
+    });
+    // For unmounting the Auth (Component),
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
       {/* <img src={logo} alt="Logo" /> */}

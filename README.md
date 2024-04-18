@@ -16,7 +16,10 @@
 <li> useNavigate Hook </li>
 <li>Implemented Sign Out </li>
 <li>Update Profile API Call </li>
+<li>Fixed the issue with the sign in and SignOut Page<li>
+<li>Unsubscribing from Component </li>
 <li>Fetch From TMDB </li>
+
 
 </ui>
 
@@ -67,4 +70,7 @@
 <h2>FireBase</h2>
 <h4>getAuth</h4>
 <p>Wherver we are sign in to our site or signing out or signing up it handle the changes in the site  , this is kind of like a event listener , this will be called automatically after doing one of these steps </p>
+<h4>onAuthStateChanged()</h4>
+<p>This API Is used for getting the user info after changing the authentication state like sign in, sign out, sign up.  It will automatically call after the every authentication state change . This is provided by firebase.
 
+<h1>
