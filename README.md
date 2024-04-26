@@ -74,3 +74,5 @@
 <p>This API Is used for getting the user info after changing the authentication state like sign in, sign out, sign up.  It will automatically call after the every authentication state change . This is provided by firebase.
 
 <h1>
+
+// 43
