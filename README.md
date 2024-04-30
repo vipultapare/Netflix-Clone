@@ -19,7 +19,8 @@
 <li>Fixed the issue with the sign in and SignOut Page<li>
 <li>Unsubscribing from Component </li>
 <li>Fetch From TMDB </li>
-<li>Store Movies data into redux store for that make moviesSLice to  store the data inside it </li> 
+<li>Store Movies data into redux store for that make moviesSLice to  store the data inside it </li>
+<li>Created Custom Hook for  fetching movie Data  and to reduce the code length in the browse component</li>
 
 
 </ui>
@@ -80,5 +81,8 @@
 <p>Because of strict mode it render the component 2 times ,  if we remove it it will render it  only once.
 reason for  double rendering: For checking inconsistency  between the state and props.</p>
 
+
+
+//1 :03
 
 
