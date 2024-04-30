@@ -9,10 +9,13 @@ const MainContainer = () => {
     return;
   }
   const mainMovie = movies[0];
-  //console.log(mainMovie);
+  console.log(mainMovie);
+  const { titleText, genres } = mainMovie.entries[0];
+  //console.log(titleText + genres);
+
   return (
     <div>
-      <VideoTitle />
+      <VideoTitle title={titleText} type={genres} />
       <VideoBackground />
     </div>
   );
