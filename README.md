@@ -19,6 +19,7 @@
 <li>Fixed the issue with the sign in and SignOut Page<li>
 <li>Unsubscribing from Component </li>
 <li>Fetch From TMDB </li>
+<li>Store Movies data into redux store for that make moviesSLice to  store the data inside it </li> 
 
 
 </ui>
@@ -73,6 +74,11 @@
 <h4>onAuthStateChanged()</h4>
 <p>This API Is used for getting the user info after changing the authentication state like sign in, sign out, sign up.  It will automatically call after the every authentication state change . This is provided by firebase.
 
-<h1>
 
-// 43
+
+<h1> Why API Calls 2 times after using empty dependency array </h1>
+<p>Because of strict mode it render the component 2 times ,  if we remove it it will render it  only once.
+reason for  double rendering: For checking inconsistency  between the state and props.</p>
+
+
+
