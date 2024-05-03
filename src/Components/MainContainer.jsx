@@ -11,12 +11,14 @@ const MainContainer = () => {
   const mainMovie = movies[0];
   console.log(mainMovie);
   const { titleText, genres } = mainMovie.entries[0];
+  const image = mainMovie.entries[0].imageModel.url;
+  //console.log(image);
   //console.log(titleText + genres);
 
   return (
     <div>
       <VideoTitle title={titleText} type={genres} />
-      <VideoBackground />
+      <VideoBackground image={image} />
     </div>
   );
 };
