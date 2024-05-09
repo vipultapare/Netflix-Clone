@@ -21,6 +21,8 @@
 <li>Fetch From TMDB </li>
 <li>Store Movies data into redux store for that make moviesSLice to  store the data inside it </li>
 <li>Created Custom Hook for  fetching movie Data  and to reduce the code length in the browse component</li>
+<li>Build Main Component</li>
+<li>Build secondary Component</li>
 
 
 </ui>
@@ -83,6 +85,6 @@ reason for  double rendering: For checking inconsistency  between the state and 
 
 
 
-//1 :30
+//2 :45
 
 

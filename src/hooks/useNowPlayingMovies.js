@@ -14,6 +14,7 @@ const useNowPlayingMovies = () =>{
       dispatch(addNowPlayingMovies(result.message));
     } catch (error) {
       console.error(error);
+      
     }
   };
 

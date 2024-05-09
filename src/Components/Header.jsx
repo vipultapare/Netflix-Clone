@@ -10,6 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../Utils/userSlice";
+import { toggleGptSearchView } from "../Utils/gptSlice";
 
 const Header = () => {
   // dispacting for redux
@@ -61,6 +62,10 @@ const Header = () => {
     };
   }, []);
 
+  const handleGptSearchClick = () => {
+    dispatch(toggleGptSearchView());
+  };
+
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
       {/* <img src={logo} alt="Logo" /> */}
@@ -72,6 +77,9 @@ const Header = () => {
 
       {user && (
         <div className="p-2">
+          <button className="p-2 m-2" onClick={handleGptSearchClick}>
+            GPT Search
+          </button>
           <img
             src={user.photoURL}
             alt="userIcon"
