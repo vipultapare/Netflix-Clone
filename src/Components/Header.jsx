@@ -11,6 +11,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../Utils/userSlice";
 import { toggleGptSearchView } from "../Utils/gptSlice";
+import { SUPPORTED_LANGUAGES } from "../Utils/constant";
 
 const Header = () => {
   // dispacting for redux
@@ -77,6 +78,13 @@ const Header = () => {
 
       {user && (
         <div className="p-2">
+          <select name="" id="" className="p-2 m-2 bg-gray-400 text-white">
+            {SUPPORTED_LANGUAGES.map((lang) => (
+              <option key={lang.identifier} value={lang.identifier}>
+                {lang.name}
+              </option>
+            ))}
+          </select>
           <button className="p-2 m-2" onClick={handleGptSearchClick}>
             GPT Search
           </button>
